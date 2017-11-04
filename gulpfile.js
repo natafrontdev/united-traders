@@ -28,7 +28,6 @@ var path = {
         style: 'src/style/main.scss',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*' //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
-        //bloks: 'src/bloks/**/*.html' //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
     },
     watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
         html: 'src/**/*.html',
@@ -48,9 +47,7 @@ gulp.task('html:build', function () {
 gulp.task('js:build', function () {
     gulp.src(path.src.js)/*('src/js/fullpubl.js')*/ //Найдем наш main файл
         .pipe(rigger()) //Прогоним через rigger
-        /*.pipe(sourcemaps.init())*/ //Инициализируем sourcemap
         .pipe(uglify()) //Сожмем наш js
-        /*.pipe(sourcemaps.write())*/ //Пропишем карты
         .pipe(gulp.dest(path.build.js)); //Выплюнем готовый файл в build
 });
 
@@ -61,7 +58,6 @@ gulp.task('style:build', function () {
         .pipe(sass()) //Скомпилируем
         .pipe(prefixer()) //Добавим вендорные префиксы
         .pipe(cleanCSS()) //Сожмем
-        /*.pipe(sourcemaps.write())*/
         .pipe(gulp.dest(path.build.css)); //И в build
 });
 
@@ -85,7 +81,6 @@ gulp.task('build', [
     'html:build',
     'js:build',
     'style:build'
-/*    'image:build'*/
 ]);
 
 gulp.task('watch', function(){
@@ -98,9 +93,6 @@ gulp.task('watch', function(){
     watch([path.watch.js], function(event, cb) {
         gulp.start('js:build');
     });
-/*    watch([path.watch.img], function(event, cb) {
-        gulp.start('image:build');
-    });*/
     watch([path.watch.templates], function(event, cb) {
         gulp.start('style:build');
     });
