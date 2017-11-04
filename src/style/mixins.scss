@@ -1,0 +1,23 @@
+/* mixins */
+
+@mixin catalog__icon-bg-pos ($width, $height, $x, $y) {
+  background-position: $x $y;
+  width: $width;
+  height: $height;
+}
+
+@mixin input-text($border, $width, $height, $pad-r, $pad-l){
+  color: $text-color;
+  border: $border;
+  font-family:$font-family;
+  font-size: $fz;
+  width: $width;
+  height: $height;
+  line-height: $height;
+  padding-right: $pad-r;
+  padding-left: $pad-l;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline:none;
+}
+/* mixins */

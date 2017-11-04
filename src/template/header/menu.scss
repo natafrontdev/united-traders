@@ -1,0 +1,252 @@
+.menu{
+  position:fixed;
+  right:-300px;
+  top:0;
+  z-index:900;
+  font-size: 16px;
+  width:260px;
+  height:100%;
+  min-height:100%;
+  padding: 0;
+  color:#000;
+  list-style: none;
+  background-color:#fff;
+  -webkit-transition-duration:.3s;
+  transition-duration:.3s;
+
+  & li{
+    display: inline-block;
+    margin-right: 22px;
+  }
+  & .menu__sub{
+    position: relative;
+    margin-right: 33px;
+    padding-right: 18px;
+  }
+  & .link-anim {
+      font-family: $f-ptsans-r;
+      color:$white-color;
+  }
+  & .link-anim:after {
+      background-color: $light-color;
+  }
+}
+
+.menu__sub{
+
+  &:after{
+    position: absolute;
+    right:0;
+    top:50%;
+    margin-top: -4px;
+    content: "\f107";
+    font: normal normal normal 14px/1 FontAwesome;
+    display: inline-block;
+    line-height: 1;
+    color:$white-color;
+    cursor: pointer;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: transform .3s;
+  }
+
+  &:hover:after{
+    transform: rotate(180deg);
+  }
+
+  &:hover > .link-anim:after{background-color: transparent;}
+
+}
+
+
+.menu--category{
+  margin: 0 0 0 -6px;
+
+  & li{
+    display: inline-block;
+    margin-right: 39px;
+  }
+  & .menu__sub{
+    position: relative;
+    margin-right: 33px;
+    padding-right: 18px;
+  }
+}
+
+.menu.is-active{
+  right:0;
+  padding:35px 0 15px;
+  box-shadow:0 0 10px rgba(0,0,0,0.2);
+
+
+  & ul{
+    margin:0;
+    padding:0;
+  }
+  & li{
+    display: block;
+    min-height:48px;
+    margin:0;
+    border-top:1px solid $light-color-gray;
+
+    & a{
+      display: block;
+      line-height: 48px;
+      padding-left: 22px;
+      text-decoration: none;
+      &:after{display: none;}
+    }
+  }
+
+  & > ul:first-child > li:first-child{
+    border-top: 0;
+  }
+
+  & .menu__sub{
+    position: relative;
+    margin-right: 0;
+    padding-right: 0;
+
+    & a{
+      line-height: 48px;
+      padding-right: 22px;
+    }
+    &:after{
+      top:24px;
+      right:15px;
+      color:$text-color;
+    }
+    &:hover .menu__sub-item{
+      position: relative;
+      top:auto;
+      z-index:2;
+      display: block;
+      background: transparent;
+      box-shadow:none;
+    }
+
+    & .menu__sub-item{
+      & li{
+        padding: 0;
+      }
+      & a{
+        font-weight: normal;
+        padding-left:32px;
+      }
+    }
+  }
+
+  & .link-anim {
+    color:$text-color;
+  }
+  & .link-anim:after {
+    background-color: transparent;
+  }
+
+}
+
+.menu__sub-item {
+  display:none;
+  margin:0;
+  padding:10px 0;
+  list-style: none;
+  background:$light-color;
+  border-radius:3px;
+  box-shadow:0 0 10px rgba(0,0,0,0.2);
+
+  & li{
+    position:relative;
+    margin:0;
+    padding:1px 22px 1px;
+    font-weight:bold;
+    line-height:17px;
+    white-space: nowrap;
+
+     & > ul{
+      display:none;
+      pointer-events:none;
+      position:absolute;
+      top:-8px;
+      left:88%;
+      z-index:3;
+      padding:10px 0;
+      background:white;
+      border-radius:3px;
+      box-shadow:0 0 10px rgba(0,0,0,0.2);
+    }
+    &:hover > ul {
+      display:block;
+      pointer-events:auto;
+      left:94%;
+    }
+  }
+
+  & li:first-child{padding-top:2px;}
+
+  & .link-anim {
+    display:block;
+    padding:0;
+    color:$text-color;
+  }
+  & .link-anim:after {
+      background-color: $text-color;
+  }
+
+  & ul{
+    margin:0 0 0 10px;
+    padding:0;
+
+    & li{
+      display:block;
+      white-space:nowrap;
+    }
+    & a{
+      display:block;
+      float:none;
+    }
+  }
+}
+
+.menu__sub:hover .menu__sub-item{
+  position: absolute;
+  top:22px;
+  z-index:2;
+  display: inline-block;
+}
+@media (min-width: 1200px) {
+  .header .menu--category{
+    margin: 0 83px 0 -6px;
+  }
+  .menu{
+    & .menu--category li{
+      margin-right: 39px;
+    }
+    & .menu--category .menu__sub{
+      margin-right: 33px;
+    }
+  }
+}
+@media (min-width: 992px) {
+  .menu{
+    position: static;
+    right:0;
+    top:auto;
+    display: block;
+    width:100%;
+    margin: 15px 0 0;
+    background-color: transparent;
+
+    & > ul {
+      display: inline-block;
+      padding:0;
+
+    }
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .menu{
+    & .menu--category li{
+      margin-right: 24px;
+    }
+  }
+}

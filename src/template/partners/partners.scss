@@ -1,0 +1,31 @@
+.partners__list{
+  padding:20px 0;
+
+  & a{
+    display: inline-block;
+    margin:10px;
+    transition: opacity .3s;
+
+    &:hover{
+      opacity: .8;
+    }
+
+    & img{
+      width:80%;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .partners__list{
+    padding:20px 0 20px 35px;
+
+    & a{
+      margin:0 25px;
+
+      & img{
+        width:100%;
+      }
+    }
+  }
+}

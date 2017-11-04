@@ -1,0 +1,75 @@
+@import "./menu.scss";
+.header{
+  padding: 0 0 36px;
+  color: $light-color;
+  background: $blue-color-dark url(../img/header-bg.png) 0 50% no-repeat;
+}
+.logo{
+  display: block;
+  height: $logo-height;
+  text-decoration: none!important;
+}
+.logo-name{
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+  line-height: $logo-height;
+  color: $blue-color-light;
+}
+.logo-name--green{
+  font-weight: normal;
+  color: $green-color;
+}
+
+.about{
+  margin-top: 10px;
+}
+.about-skill{
+  font-family: $f-opensans-l;
+  font-size: 24px;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 100%;
+  letter-spacing:5px;
+  margin-bottom: 15px;
+
+}
+.about-skill__dop{
+  display: block;
+}
+.about-text{
+  font-size: 15px;
+  text-align: center;
+  line-height: 160%;
+  color:$light-color;
+}
+
+@media (min-width: 992px) {
+  .header{
+    margin-bottom: 65px;
+    padding: 25px 0 76px;
+  }
+
+  .logo{
+    margin-left: 42px;
+    padding-left: 65px;
+    background: url(data:img/png;base64,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)
+                0 0 no-repeat;
+  }
+  .logo-name{
+    font-size: 23px;
+  }
+
+  .about{
+    margin-top: 100px;
+  }
+  .about-skill{
+    font-size: 48px;
+    margin-bottom: 70px;
+  }
+  .about-text{
+    font-size: 18px;
+  }
+}

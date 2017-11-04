@@ -1,0 +1,33 @@
+.btn{
+  cursor:pointer;
+  display: inline-block;
+  font-family: $f-ptsans-r;
+  font-weight: 400;
+  line-height: 40px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid $btn-b;
+  border-radius: 3px;
+  margin-top: 10px;
+  padding: 5px 36px;
+  font-size: 15px;
+  color: $blue-color-dark;
+  transition: border-color .3s,color .3s;
+}
+
+a.btn{
+  color: $blue-color-dark;
+  text-decoration: none!important;
+}
+
+.btn:hover{
+  color: $blue-color-dark;
+  border-color: darken($btn-b,20%);
+  text-decoration: none;
+}
+

@@ -1,0 +1,54 @@
+.icon1 {
+	background: url("sprite.png") 0 0;
+	width: 52px;
+	height: 64px;
+}
+
+.icon2 {
+	background: url("sprite.png") 0 -64px;
+	width: 62px;
+	height: 64px;
+}
+
+.icon3 {
+	background: url("sprite.png") 0 -128px;
+	width: 64px;
+	height: 52px;
+}
+
+.icon4 {
+	background: url("sprite.png") 0 -180px;
+	width: 64px;
+	height: 64px;
+}
+
+.icon5 {
+	background: url("sprite.png") 0 -244px;
+	width: 58px;
+	height: 64px;
+}
+
+.icon6 {
+	background: url("sprite.png") 0 -308px;
+	width: 64px;
+	height: 62px;
+}
+
+.icon7 {
+	background: url("sprite.png") 0 -370px;
+	width: 91px;
+	height: 59px;
+}
+
+.icon8 {
+	background: url("sprite.png") 0 -429px;
+	width: 58px;
+	height: 64px;
+}
+
+.icon9 {
+	background: url("sprite.png") 0 -493px;
+	width: 64px;
+	height: 48px;
+}
+

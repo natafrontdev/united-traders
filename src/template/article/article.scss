@@ -1,0 +1,154 @@
+$path: "../img/sprite.png";
+
+.article{
+  margin: 30px 0 26px;
+
+  & .title-block{
+    margin-bottom: 15px;
+  }
+}
+
+.article--bg{
+  & .article__item{
+    padding:25px 20px 50px 25px;
+    margin-bottom: 30px;
+    background-color: $light-color;
+  }
+
+  & .link-anim{
+    font-size: 15px;
+  }
+}
+
+.article__item{
+  width:100%;
+  text-align: center;
+  padding:15px 20px 15px 25px;
+}
+
+.article__text{
+  overflow: hidden;
+  text-align: left;
+  line-height: 120%;
+  max-height: 68px;
+  margin-bottom: 43px;
+}
+.article__title{
+  overflow: hidden;
+  font-size: 20px;
+  letter-spacing: $letter-title;
+  max-height: 30px;
+  padding-right: 10px;
+  color: $blue-color-dark;
+}
+
+.article__link{
+  color:$text-color;
+  text-decoration: underline;
+  transition: color .3s;
+
+  &:hover{
+    color:$black-color;
+  }
+}
+.article--text-change{
+
+  & .article__title{
+    font-size: 16px;
+    margin: 0 0 14px;
+    text-transform: uppercase;
+  }
+  & .article__text{
+    text-align: center;
+  }
+  & .link-anim{
+    color:$text-color;
+  }
+  & .link-anim:after{
+    background-color: $text-color;
+  }
+}
+
+[class^="article__icon"]{
+  position: relative;
+  display: inline-block;
+  width:94px;
+  height:94px;
+}
+
+[class^="article__icon"]:after{
+  content:'';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.article{
+
+  &__icon1:after {
+    background: url("#{$path}") 0 0;
+    width: 52px;
+    height: 64px;
+  }
+
+  &__icon2:after {
+    background: url("#{$path}") 0 -64px;
+    width: 62px;
+    height: 64px;
+  }
+
+  &__icon3:after {
+    background: url("#{$path}") 0 -128px;
+    width: 64px;
+    height: 52px;
+  }
+
+  &__icon4:after {
+    background: url("#{$path}") 0 -180px;
+    width: 64px;
+    height: 64px;
+  }
+
+  &__icon5:after {
+    background: url("#{$path}") 0 -244px;
+    width: 58px;
+    height: 64px;
+  }
+
+  &__icon6:after {
+    background: url("#{$path}") 0 -308px;
+    width: 64px;
+    height: 62px;
+  }
+
+  &__icon7:after {
+    background: url("#{$path}") 0 -371px;
+    width: 91px;
+    height: 58px;
+  }
+
+  &__icon8:after {
+    background: url("#{$path}") 0 -429px;
+    width: 58px;
+    height: 64px;
+  }
+
+  &__icon9:after {
+    background: url("#{$path}") 0 -494px;
+    width: 64px;
+    height: 47px;
+  }
+}
+
+@media (min-width: 992px) {
+  .article{
+    margin: 60px 0 52px;
+  }
+  .article--text-change{margin-bottom: 100px;}
+  .article .title-block{
+    margin-bottom: 70px;
+  }
+}
